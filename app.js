@@ -7,6 +7,8 @@ const logger = require('morgan');
 //declaraçao de router
 const indexRouter = require('./routes/index');
 const profileRouter = require('./routes/profile');
+const secretRouter = require('./routes/secret');
+const comRouter = require('./routes/community');
 
 const app = express();
 
@@ -23,6 +25,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app use
 app.use('/', indexRouter);
 app.use('/perfil', profileRouter);
+app.use('/4444', secretRouter);
+app.use('/comunidade', comRouter);
+
+//imagens estaticas
+app.use(express.static('public'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
