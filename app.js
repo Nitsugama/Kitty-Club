@@ -4,15 +4,17 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-//declaraçao de router
+//Rotas para navegação nos arquivos
 const indexRouter = require('./routes/index');
 const profileRouter = require('./routes/profile');
 const secretRouter = require('./routes/secret');
-const comRouter = require('./routes/community');
-
+const comunityRouter = require('./routes/community');
+// VIDEOPLAYER CARREGA OS VIDEOS COM LINKS
+//EXEMPLO /video/gatofofo32
+const videoPlayer = require('./routes/videoPlayer');
 const app = express();
 
-// view engine setup
+//configuração do renderizador das paginas html
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -22,12 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app use
+//Rotas para navegação na url
 app.use('/', indexRouter);
 app.use('/perfil', profileRouter);
 app.use('/4444', secretRouter);
-app.use('/comunidade', comRouter);
-
+app.use('/comunidade', comunityRouter);
+app.use('/video', videoPlayer);
+app.use('/video/:id', videoPlayer);
 //imagens estaticas
 app.use(express.static('public'));
 
