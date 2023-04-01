@@ -3,6 +3,9 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="video.mp4" rel="stylesheet" />
+<script src="video.mp4"></script>
+
   </head>
   <body>
     <h1><%= title %></h1>
@@ -17,5 +20,13 @@
     <button>
         <a href="/comunidade">comunidade</a>
       </button>
+      <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+        <source src="video.mp4" type="video/mp4" />
+    </video>
+    <script>
+      var player = videojs('my-video');
+  </script>
+  
+
   </body>
 </html>

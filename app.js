@@ -10,7 +10,6 @@ const profileRouter = require('./routes/profile');
 const secretRouter = require('./routes/secret');
 const comunityRouter = require('./routes/community');
 // VIDEOPLAYER CARREGA OS VIDEOS COM LINKS
-//EXEMPLO /video/gatofofo32
 const videoPlayer = require('./routes/videoPlayer');
 const app = express();
 
