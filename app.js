@@ -1,20 +1,15 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-//Nossa lobo mau
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-//Rotas para navegação nos arquivos
-const indexRouter = require('./routes/index');
-const profileRouter = require('./routes/profile');
-const secretRouter = require('./routes/secret');
-const comunityRouter = require('./routes/community');
-// VIDEOPLAYER CARREGA OS VIDEOS COM LINKS
-const videoPlayer = require('./routes/videoPlayer');
-const app = express();
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
-//configuração do renderizador das paginas html
+var app = express();
+
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -24,15 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Rotas para navegação na url
 app.use('/', indexRouter);
-app.use('/perfil', profileRouter);
-app.use('/4444', secretRouter);
-app.use('/comunidade', comunityRouter);
-app.use('/video', videoPlayer);
-app.use('/video/:id', videoPlayer);
-//imagens estaticas
-app.use(express.static('public'));
+app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
