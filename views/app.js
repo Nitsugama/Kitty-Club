@@ -9,7 +9,6 @@ const indexRouter = require('./routes/index');
 const profileRouter = require('./routes/profile');
 const secretRouter = require('./routes/secret');
 const comunityRouter = require('./routes/community');
-// VIDEOPLAYER CARREGA OS VIDEOS COM LINKS
 const videoPlayer = require('./routes/videoPlayer');
 const app = express();
 
@@ -28,7 +27,6 @@ app.use('/', indexRouter);
 app.use('/perfil', profileRouter);
 app.use('/4444', secretRouter);
 app.use('/comunidade', comunityRouter);
-app.use('/video', videoPlayer);
 app.use('/video/:id', videoPlayer);
 //imagens estaticas
 app.use(express.static('public'));

@@ -1,4 +1,4 @@
-const db = require('../config/db');
+import { query } from '../config/db';
 
 class User {
   constructor(user_name, user_email, user_pass) {
@@ -16,7 +16,7 @@ class User {
     };
 
     try {
-      const result = await db.query(sql, newUser);
+      const result = await query(sql, newUser);
       return result.insertId;
     } catch (err) {
       throw err;
@@ -28,7 +28,7 @@ class User {
     const values = [user_email, user_pass];
 
     try {
-      const result = await db.query(sql, values);
+      const result = await query(sql, values);
       return result[0];
     } catch (err) {
       throw err;
@@ -36,4 +36,4 @@ class User {
   }
 }
 
-module.exports = User;
+export default User;
