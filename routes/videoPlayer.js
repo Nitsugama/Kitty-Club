@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* Renderiza a pagina de video*/
-router.get('/:id', function(req, res, next){
-    res.render('videoPlayer', { title: 'Kitty Club | Video', id: req.params.id });
+router.get('/:id', function(req, res, next) {
+  const imageName = req.params.id;
+  const caminhoImagem = `/images/${imageName}.jpg`; // Substitua pela extensão correta da imagem, se necessário
+  res.render('videoPlayer', { title: 'Kitty Club | Video', id: req.params.id, caminhoImagem: caminhoImagem });
 });
 
 module.exports = router;

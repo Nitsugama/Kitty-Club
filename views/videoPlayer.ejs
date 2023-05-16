@@ -3,30 +3,19 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="video.mp4" rel="stylesheet" />
-<script src="video.mp4"></script>
-
   </head>
   <body>
     <h1><%= title %></h1>
-    <p> Bem - vindo a <%= title %></p>
-    <p>Você esta no video <%= id%></p>
+    <p>Bem-vindo ao vídeo <%= id %></p>
     <button>
       <a href="/perfil">Perfil</a>
     </button>
     <button>
-        <a href="/">Página Inicial</a>
+      <a href="/">Página Inicial</a>
     </button>
     <button>
-        <a href="/comunidade">comunidade</a>
-      </button>
-      <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
-        <source src="video.mp4" type="video/mp4" />
-    </video>
-    <script>
-      var player = videojs('my-video');
-  </script>
-  
-
+      <a href="/comunidade">Comunidade</a>
+    </button>
+    <img src="<%= caminhoImagem %>" alt="Imagem do vídeo">
   </body>
 </html>

@@ -29,7 +29,6 @@ app.use('/perfil', profileRouter);
 app.use('/4444', secretRouter);
 app.use('/comunidade', comunityRouter);
 app.use('/video', videoPlayer);
-app.use('/video/:id', videoPlayer);
 //imagens estaticas
 app.use(express.static('public'));
 
