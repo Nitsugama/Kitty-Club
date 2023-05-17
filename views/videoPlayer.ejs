@@ -1,21 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Bem-vindo ao vídeo <%= id %></p>
-    <button>
-      <a href="/perfil">Perfil</a>
-    </button>
-    <button>
-      <a href="/">Página Inicial</a>
-    </button>
-    <button>
-      <a href="/comunidade">Comunidade</a>
-    </button>
-    <img src="<%= caminhoImagem %>" alt="Imagem do vídeo">
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kittyclub</title>
+    <link rel="stylesheet" href="../stylesheets/video.css">
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+</head>
+<body>
+    <div class="home">
+        <a href="#"><img src="../images/logo.png" alt="Logo Kittyclub"></a>
+        <nav class="navbar">
+            <button class="search-button" type="submit" aria-label="Pesquisar">
+                <img id="lupa" src="../images/lupa 1.png" width="38px" alt="Ícone de lupa">
+            </button>
+            <form class="search-form" action="your-search-action-here" method="get">
+                <input class="search-input" type="text" placeholder="Buscar no Kittyclub">
+            </form>
+        </nav>
+      <a href="#" ><img class="per" id="profilepic" src="../images/perfil.png" alt="Foto do perfil do usuário"></a>
+    </div>
+    <br>
+    <div class="graybar">
+        <a href="index.html" class="links">home</a>
+        <span>|</span>
+        <a href="#" class="links">videos</a>
+        <span>|</span>
+        <a href="#" class="links">comunidade</a>
+    </div>
+    <main>
+        <section id="pagina_video">
+            <div class="video_principal">
+                <video controls>
+                    <source id="video" src="<%= caminhoImagem %>">
+                </video>
+            </div>
+            <div class="tit">
+                <div class="hud">
+                    <h2 id="title">Lorem ipsum dolor sit amet consectet</h2>
+                    <img id="view" src="../images/view 2.png">
+                    <h3>20K</h3>
+                    <img id="like" src="../images/1077035 2.png">
+                    <h3>20K</h3>
+                </div>
+            </div>
+            <div class="hud2">
+                <div class="perfil_vid">
+                    <img src="../images/Ellipse 15.png">
+                    <div class="info">
+                        <h3 id="canal">cast</h3>
+                        <h6 id="inscritos">inscritos:500</h6>
+                    </div>
+                    <button id="bts-inscrição">increver-se</button>
+                </div>
+            </div>
+            <div class="descricao">
+                <div class="descricao_text">
+                    <p id="descricao-video">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus, vitae rerum doloribus
+                        praesentium earum quia tempore in voluptatem consequuntur asperiores quibusdam dolor enim
+                        dolores illo, quis necessitatibus doloremque? Ipsa.
+                    </p>
+                </div>
+            </div>
+            <section id="comentarios">
+                <h2>0 comentarios</h2>
+                <div class="campo">
+                    <img src="../images/Ellipse 15.png" alt="">
+                    <form class="search-box1">
+                        <input type="text" name="search" placeholder="comente">
+                        <hr id="coment">
+                        <input type="submit" value="Pesquisar">
+                    </form>
+                </div>
+                <div class="display-comen">
+                    <div class="coment">
+                        <img id="perfil1" src="../images/Ellipse 15.png" alt="">
+                        <p id="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint recusandae
+                            quis mollitia, quod corporis quaerat ipsam deserunt minus atque rem earum aut sapiente
+                            iusto quo cupiditate tempore est sunt? Deleniti?</p>
+                    </div>
+                    <div class="coment">
+                        <img id="perfil2" src="../images/Ellipse 15.png" alt="">
+                        <p id="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint recusandae
+                            quis mollitia, quod corporis quaerat ipsam deserunt minus atque rem earum aut sapiente
+                            iusto quo cupiditate tempore est sunt? Deleniti?</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="video_list">
+            <div class="video">
+                <a href="#">
+                    <div id="primeiro_vid" class="next_video"></div>
+                </a>
+                <p>cats</p>
+            </div>
+            <div class="video">
+                <a href="#">
+                    <div class="next_video"></div>
+                </a>
+                <p>cats</p>
+            </div>
+            <div class="video">
+                <a href="#">
+                    <div class="next_video"></div>
+                </a>
+                <p>cats</p>
+            </div>
+            <div class="video">
+                <a href="#">
+                    <div class="next_video"></div>
+                </a>
+                <p>cats</p>
+            </div>
+            <div class="video">
+                <a href="#">
+                    <div class="next_video"></div>
+                </a>
+                <p>cats</p>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
+ ck,]
