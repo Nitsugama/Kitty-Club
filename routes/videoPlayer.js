@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/:id', function(req, res, next) {
-  const imageName = req.params.id;
-  const caminhoImagem = `/images/${imageName}.mp4`; // Substitua pela extensão correta da imagem, se necessário
-  res.render('videoPlayer', { title: 'Kitty Club | Video', id: req.params.id, caminhoImagem: caminhoImagem });
+  const videoName = req.params.id;
+  const caminhoVideo = `/video/${videoName}.mp4`; // Id que recebe o link do video
+  //No futuro sera substituido por um link de video do servidor ou banco de dados
+  res.render('videoPlayer', { title: 'Kitty Club | Video', id: req.params.id, caminhoVideo: caminhoVideo });
 });
 
 module.exports = router;
