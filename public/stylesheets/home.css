@@ -48,6 +48,7 @@ a{
   text-decoration: none;
 }
 
+
 /*navbar part*/
 
 .home{
@@ -133,6 +134,7 @@ p{
 }
 
 p.row2{
+  font-size: 1vw; 
   justify-content: flex-start;
 }
 
@@ -142,6 +144,7 @@ p.row2{
 }
 
 div.bottext{
+  align-items: center;
   display: flex;
   justify-content: space-between;
 }
@@ -282,13 +285,13 @@ a.feedback:hover{
 }
 
 .wrapper{
-  margin: 250px auto;
+  margin: 109px auto;
   padding: 20px;
   background: #222222;
   border-radius: 20px;
   width: 25%;
   position: relative;
-  transition: all 5s ease-in-out;
+
 }
 
 .wrapper h2{
@@ -315,6 +318,17 @@ a.feedback:hover{
   overflow: auto;
 }
 
+#cat-vid{
+  width: 25vw;
+}
+#heart-but,#view-but{
+  border: black;
+  background: black;
+}
+#heart-but:hover,#view-but:hover{
+  opacity: 0.5;
+}
+
 /*form design*/
 
 .container{
@@ -339,6 +353,7 @@ input[type="text"], textarea{
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  color: white;
 }
 
 input[type="submit"]{
@@ -362,8 +377,23 @@ input[type="password"], textarea{
   margin-top: 6px;
   margin-bottom: 2px;
   resize: vertical;
+  color: white;
 }
 
 .register p{
   display: flex;
+}
+
+#likes{
+  font-size: 1vw;
+  color: white;
+}
+#views{
+  color: white;
+}
+#heart{
+  width: 2vw;
+}
+#visu{
+  width: 2vw;
 }
