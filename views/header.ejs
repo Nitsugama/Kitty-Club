@@ -1,78 +1,101 @@
-  <!-- nav bar start -->
-  <div class="home"><!--div home-->
-   <a href="/"><img src="../images/logo.png" alt="Logo Kittyclub"></a>
-    <!--searchbar start-->
-    <div class="navbar"><!--navbar-->
-      <button class="search-button" type="submit" style="margin-top: 6px;"><img id="lupa" src="../images/lupa 1.png" width="35px" alt="your-image-alt-text"></button>
-      <form class="search-form" action="your-search-action-here" method="get" style="width: 430px;" >
-        <input class="search-input" id="input" type="text" placeholder="Buscar kitty club">
+<!-- nav bar start -->
+<div class="home"><!--div home-->
+  <a href="/"><img src="../images/logo.png" alt="Logo Kittyclub"></a>
+  <!--searchbar start-->
+  <div class="navbar"><!--navbar-->
+    <button class="search-button" type="submit" style="margin-top: 6px;"><img id="lupa" src="../images/lupa 1.png"
+        width="35px" alt="your-image-alt-text"></button>
+    <form class="search-form" action="your-search-action-here" method="get" style="width: 430px;">
+      <input class="search-input" id="input" type="text" placeholder="Buscar kitty club">
+    </form>
+  </div><!--navbar-->
+  <!--searchbar finish-->
+  <div class="box">
+    <a href="#" onclick="openPopup()">
+      <img id="profilepic" src="../images/profilepic1.jpg" alt="foto de perfil">
+    </a>
+    
+    <!-- Pop-up de Login -->
+    <div id="popup" class="popup">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="login">Login Kitty Club</h2>
+      <p class="login">Se você não possui uma conta <a href="#" onclick="openRegistro()" class="linkar"> registrar</a></p>
+      <!-- Adicione aqui o seu formulário de login -->
+      <form method="get" action="/">
+        <!-- Seus campos de formulário aqui -->
+        <label>Usuário/email</label>
+        <input id="usuário" type="text" placeholder="Seu Usuário">
+        <label>Senha</label>
+        <input id="senha" type="password" placeholder="Sua senha">
+        <!-- <label>Subject</label>
+                <textarea placeholder="Your Query Here..."></textarea> -->
+        <a href="#">esqueci minha senha</a>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
       </form>
-    </div><!--navbar-->
-    <!--searchbar finish-->
-      <div class="box">
-        <a href="#div0ne" class="button">
-          <img id="profilepic" src="../images/profilepic1.jpg" alt="foto de perfil">
-        </a>
-      </div><!--box-->
+    </div>
+    
+    <!-- Pop-up de Registro -->
+    <div id="popupRegistro" class="popup">
+      <span class="close" onclick="closeRegistro()">&times;</span>
+      <h2 id="login">Registro Kitty Club</h2>
+      <p class="login">Se você possui uma conta <a href="#" onclick="voltarLogin()" class="linkar">entrar</a></p>
 
-      <div class="overlay" id="div0ne">
-        <div class="wrapper">
-          <h2>Login Kitty Club</h2>
-          <p class="login">Se você não possui uma conta <a href="#div1ne" class="linkar">registrar</a></p>
-          <a href="/" class="close">&times;</a>
-          <div class="content">
-            <div class="container">
-              <form>
-                <label>Usuário/email</label>
-                <input type="text" placeholder="Seu Usuário">
-                <label>Senha</label>
-                <input type="password" placeholder="Sua senha">
-                <!-- <label>Subject</label>
-                <textarea placeholder="Your Query Here..."></textarea> -->
-                <a href="#">esqueci minha senha</a>
-                <br>
-                <br>
-                <br>
-                <input type="submit" value="Submit">
-              </form>
-            </div><!--container-->
-          </div><!--content-->
-
-        </div><!--wrapper-->
-      </div><!--overlay-div0ne-->
-
-      <div class="overlay" id="div1ne">
-        <div class="wrapper">
-          <h2>register Kitty Club</h2>
-          <p class="register">se voce tem uma conta <a href="#div0ne" class="linkar">Entre</a></p>
-          <a href="#" class="close">&times;</a>
-          <div class="content">
-            <div class="container">
-              <form>
-                <label>Usuario</label>
-                <input type="text" placeholder="usuario">
-                <label>Email</label>
-                <input type="text" placeholder="Email">
-                <label>Senha</label>
-                <input type="password" placeholder="Sua senha">
-                <!-- <label>Subject</label>
-                <textarea placeholder="Your Query Here..."></textarea> -->
-                <a href="#">esqueci minha senha</a>
-                <br>
-                <br>
-                <br>
-                <input type="submit" value="Submit">
-              </form>
-            </div><!--container-->
-          </div><!--content-->
-
-        </div><!--wrapper-->
-      </div><!--overlay-div0ne-->
-
-  </div><!--home finish-->
-  <br>
-  <div class="graybar">
-    <a href="/" class="links">home</a>  
-    <h4>|</h4>
-    <a href="/comunidade" class="links">comunidade</a>
+      <!-- Adicione aqui o seu formulário de registro -->
+      <form method="get" action="/">
+        <!-- Seus campos de formulário aqui -->
+        <label>Nome de usuário</label>
+        <input id="usuário" type="text" placeholder="Seu nome de usuário">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="Seu email">
+        <label>Senha</label>
+        <input id="senha" type="password" placeholder="Sua senha">
+        <!-- <label>Subject</label>
+                    <textarea placeholder="Your Query Here..."></textarea> -->
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Registrar">
+      </form>
+      <a href="#" onclick="voltarLogin()">Voltar</a>
+    </div>
   </div>
+</div>
+    <div class="graybar">
+      <a href="/" class="links">home</a>
+      <h4>|</h4>
+      <a href="/comunidade" class="links">comunidade</a>
+    </div>
+    
+    <script>
+      function openPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+      }
+    
+      function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+      }
+    
+      function openRegistro() {
+        var popupRegistro = document.getElementById("popupRegistro");
+        popupRegistro.style.display = "block";
+      }
+    
+      function closeRegistro() {
+        var popupRegistro = document.getElementById("popupRegistro");
+        popupRegistro.style.display = "none";
+        popup.style.display = "none";
+      }
+    
+      function voltarLogin() {
+        var popupRegistro = document.getElementById("popupRegistro");
+        popupRegistro.style.display = "none";
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+      }
+    </script>
+    
