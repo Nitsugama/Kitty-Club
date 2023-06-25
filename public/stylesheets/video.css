@@ -6,7 +6,6 @@
 body {
     background-color: #000;
     font-family: 'Open Sans', sans-serif;
-    zoom: 85%;
 }
 
 main {
@@ -111,7 +110,6 @@ p {
 }
 
 .video_principal {
-  z-index: -1;
     width: 60vw;
     height: 60vh;
     margin: 6% 0% 0% 5%;
