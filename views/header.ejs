@@ -11,63 +11,62 @@
   </div><!--navbar-->
   <!--searchbar finish-->
   <div class="box">
-    <a href="#" onclick="openPopup()">
-      <img id="profilepic" src="../images/profilepic1.jpg" alt="foto de perfil">
-    </a>
-    
+    <% if (isAuthenticated) { %>
+        <div class="usernamediv">
+          <div class="logoutbtn">
+            <span class="username"><%= username %></span> 
+            <a href="/logout" class="logout">Logout</a>
+          </div>
+          <img id="profilepic" src="../images/profilepic1.jpg" alt="foto de perfil">
+        </div>
+      <% } else { %>
+        <a href="#" onclick="openPopup()">
+          <div class="loginbotao">Login</div>
+        </a>
+      <% } %>
     <!-- Pop-up de Login -->
     <div id="popup" class="popup">
       <span class="close" onclick="closePopup()">&times;</span>
       <h2 id="login">Login Kitty Club</h2>
       <p class="login">Se você não possui uma conta <a href="#" onclick="openRegistro()" class="linkar"> registrar</a></p>
       <!-- Adicione aqui o seu formulário de login -->
-      <form method="get" action="/">
-        <!-- Seus campos de formulário aqui -->
-        <label>Usuário/email</label>
-        <input id="usuário" type="text" placeholder="Seu Usuário">
+      <form method="post" action="/login">
+        <label>Email</label>
+        <input name="email" type="email" placeholder="Seu email">
         <label>Senha</label>
-        <input id="senha" type="password" placeholder="Sua senha">
-        <!-- <label>Subject</label>
-                <textarea placeholder="Your Query Here..."></textarea> -->
-        <a href="#">esqueci minha senha</a>
+        <input name="senha" type="password" placeholder="Sua senha">
         <br>
         <br>
         <br>
         <input type="submit" value="Submit">
       </form>
+      
+      
     </div>
     
     <!-- Pop-up de Registro -->
-    <div id="popupRegistro" class="popup">
-      <span class="close" onclick="closeRegistro()">&times;</span>
-      <h2 id="login">Registro Kitty Club</h2>
-      <p class="login">Se você possui uma conta <a href="#" onclick="voltarLogin()" class="linkar">entrar</a></p>
+      <div id="popupRegistro" class="popup">
+        <span class="close" onclick="closeRegistro()">&times;</span>
+        <h2 id="login">Registro Kitty Club</h2>
+        <p class="login">Se você possui uma conta <a href="#" onclick="voltarLogin()" class="linkar">entrar</a></p>
 
-      <!-- Adicione aqui o seu formulário de registro -->
-      <form method="get" action="/">
-        <!-- Seus campos de formulário aqui -->
-        <label>Nome de usuário</label>
-        <input id="usuário" type="text" placeholder="Seu nome de usuário">
-        <label>Email</label>
-        <input id="email" type="email" placeholder="Seu email">
-        <label>Senha</label>
-        <input id="senha" type="password" placeholder="Sua senha">
-        <!-- <label>Subject</label>
-                    <textarea placeholder="Your Query Here..."></textarea> -->
-        <br>
-        <br>
-        <br>
-        <input type="submit" value="Registrar">
-      </form>
-     
-    </div>
+        <!-- Adicione aqui o seu formulário de registro -->
+        <form method="post" action="/register">
+          <label>Nome de usuário</label>
+          <input name="username" type="text" placeholder="Seu nome de usuário">
+          <label>Email</label>
+          <input name="email" type="email" placeholder="Seu email">
+          <label>Senha</label>
+          <input name="password" type="password" placeholder="Sua senha">
+          <br>
+          <br>
+          <br>
+          <input type="submit" value="Registrar">
+        </form>
+      </div>
   </div>
 </div>
-    <div class="graybar">
-      <a href="/" class="links">home</a>
-      <h4>|</h4>
-      <a href="/comunidade" class="links">comunidade</a>
-    </div>
+    <div class="graybar"></div>
     
     <script>
       

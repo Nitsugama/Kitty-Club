@@ -1,7 +1,37 @@
 .segredo {
   font-size: large;
 }
+.username{
+  color:white;
+  font-size: 140%;
+  font-weight: 700;
+  margin: 20%;
+}
+.usernamediv{
+  display: flex;
+  align-items: center;
+}
+.username:hover{
+  color: #EB8B1B;
+}
+.logout{
+  font-size: 120%;
+}
+.logout:hover{
+  text-decoration: underline ;
+}
 
+.loginbotao{
+  color: black;
+  background-color: #EB8B1B;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  padding-right: 25px;
+  border-radius: 5px;
+  font-size: 140%;
+  font-weight: 700;
+}
 .bloco {
   text-align: center;
   display: flex;

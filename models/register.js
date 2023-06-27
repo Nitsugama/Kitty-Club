@@ -1,39 +1,52 @@
-import { query } from '../config/db';
+// Importe as dependências necessárias
+const bcrypt = require('bcrypt');
+const connection = require('../config/database'); // Importe o arquivo de configuração do banco de dados
 
-class User {
-  constructor(user_name, user_email, user_pass) {
-    this.user_name = user_name;
-    this.user_email = user_email;
-    this.user_pass = user_pass;
+class Register {
+  constructor(username, email, password) {
+    this.username = username;
+    this.email = email;
+    this.password = password;
   }
 
-  async register() {
-    const sql = 'INSERT INTO login_tables SET ?';
-    const newUser = {
-      user_name: this.user_name,
-      user_email: this.user_email,
-      user_pass: this.user_pass
-    };
+  async validate() {
+    // Validação do nome
+    const usernameRegex = /^[a-zA-Z][a-zA-Z0-9]*$/;
+    if (this.username.length < 4 || !usernameRegex.test(this.username)) {
+      throw new Error('Nome de usuário inválido. O nome deve ter pelo menos 4 letras e não pode começar com números ou conter espaços.');
+    }
 
-    try {
-      const result = await query(sql, newUser);
-      return result.insertId;
-    } catch (err) {
-      throw err;
+    // Verifica se o nome de usuário já existe no banco de dados
+    const [rows] = await connection.execute('SELECT COUNT(*) as count FROM users WHERE user_name = ?', [this.username]);
+    const count = rows[0].count;
+    if (count > 0) {
+      throw new Error('Nome de usuário já existe. Escolha outro nome de usuário.');
+    }
+
+    // Verifica se o email já está cadastrado
+    const [emailRows] = await connection.execute('SELECT COUNT(*) as count FROM users WHERE user_email = ?', [this.email]);
+    const emailCount = emailRows[0].count;
+    if (emailCount > 0) {
+      throw new Error('O email já está cadastrado. Use um email diferente.');
+    }
+
+    // Validação da senha
+    if (this.password.length < 8) {
+      throw new Error('A senha deve ter pelo menos 8 caracteres.');
     }
   }
 
-  static async login(user_email, user_pass) {
-    const sql = 'SELECT * FROM login_tables WHERE user_email = ? AND user_pass = ?';
-    const values = [user_email, user_pass];
+  async save() {
+    // Criptografa a senha
+    const hashedPassword = await bcrypt.hash(this.password, 10);
 
-    try {
-      const result = await query(sql, values);
-      return result[0];
-    } catch (err) {
-      throw err;
-    }
+    // Insere as informações do usuário no banco de dados
+    await connection.execute('INSERT INTO users (user_name, user_email, user_pass) VALUES (?, ?, ?)', [
+      this.username,
+      this.email,
+      hashedPassword
+    ]);
   }
 }
 
-export default User;
+module.exports = Register;
