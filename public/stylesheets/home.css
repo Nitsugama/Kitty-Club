@@ -15,7 +15,10 @@
   width: 70px;
   height: 70px;
 }
-
+#pesquisa{
+  border: none;
+  width: 90%;
+}
 .linha {
   display: flex;
   border-style: solid;
@@ -78,7 +81,9 @@ input:active {
   display: flex;
   background-color: #333333;
 }
-
+.search-form{
+height: 0vw;
+}
 input#input.search-input {
   border-radius: 20px;
   color: white;
@@ -91,6 +96,7 @@ input#input.search-input:focus {
   border-radius: 20px;
   outline: none;
   box-shadow: none;
+  border: none;
 }
 
 .search-button {
@@ -368,13 +374,14 @@ input[type="text"],
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
   color: white;
+  outline: none;
 }
 
 input[type="submit"] {
@@ -495,6 +502,7 @@ textarea {
 }
 
 .popup a {
+  margin-left: 1%;
   display: block;
   text-align: center;
   margin-bottom: 10px;
@@ -506,9 +514,10 @@ textarea {
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 2vw;
+  margin-top: 3vw;
   background-color: #EB8B1B;
 }
+
 
 
 /* Estilos responsivos */

@@ -6,7 +6,7 @@
     <button class="search-button" type="submit" style="margin-top: 6px;"><img id="lupa" src="../images/lupa 1.png"
         width="35px" alt="your-image-alt-text"></button>
     <form class="search-form" action="your-search-action-here" method="get" style="width: 430px;">
-      <input class="search-input" id="input" type="text" placeholder="Buscar kitty club">
+      <input type="text" id="pesquisa" onkeyup="pesquisar()" placeholder="Digite algo para pesquisar">
     </form>
   </div><!--navbar-->
   <!--searchbar finish-->
@@ -59,7 +59,7 @@
         <br>
         <input type="submit" value="Registrar">
       </form>
-      <a href="#" onclick="voltarLogin()">Voltar</a>
+     
     </div>
   </div>
 </div>
@@ -70,6 +70,26 @@
     </div>
     
     <script>
+      
+    function pesquisar() {
+      // Obtém o valor inserido na barra de pesquisa
+      var termo = document.getElementById("barra-pesquisa").value.toLowerCase();
+
+      // Obtém todos os itens que serão filtrados
+      var itens = document.getElementsByClassName("item");
+
+      // Percorre todos os itens e exibe ou oculta com base no termo de pesquisa
+      for (var i = 0; i < itens.length; i++) {
+        var item = itens[i];
+        var nome = item.textContent.toLowerCase();
+
+        if (nome.includes(termo)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      }
+    }
       function openPopup() {
         var popup = document.getElementById("popup");
         popup.style.display = "block";

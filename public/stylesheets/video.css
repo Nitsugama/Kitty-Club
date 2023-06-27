@@ -121,14 +121,15 @@ p {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    margin-right: 5%;
+    margin-left: 4%;
+    margin-right: 2%;
 }
 
 #video_list p {
     margin-top: 10px;
     font-size: 1.5vw;
     font-weight: 700;
-    WIDTH: 16vw;
+    WIDTH: 13vw;
 }
 
 #primeiro_vid {
