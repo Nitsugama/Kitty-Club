@@ -1,0 +1,122 @@
+<!-- nav bar start -->
+<div class="home"><!--div home-->
+  <a href="/"><img src="../images/logo.png" alt="Logo Kittyclub"></a>
+  <!--searchbar start-->
+  <div class="navbar"><!--navbar-->
+    <button class="search-button" type="submit" style="margin-top: 6px;"><img id="lupa" src="../images/lupa 1.png"
+        width="35px" alt="your-image-alt-text"></button>
+    <form class="search-form" action="your-search-action-here" method="get" style="width: 430px;">
+      <input type="text" id="pesquisa" onkeyup="pesquisar()" placeholder="Digite algo para pesquisar">
+    </form>
+  </div><!--navbar-->
+  <!--searchbar finish-->
+  <div class="box">
+    <% if (isAuthenticated) { %>
+        <div class="usernamediv">
+          <div class="logoutbtn">
+            <span class="username"><%= username %></span> 
+            <a href="/logout" class="logout">Logout</a>
+          </div>
+          <img id="profilepic" src="../images/profilepic1.jpg" alt="foto de perfil">
+        </div>
+      <% } else { %>
+        <a href="#" onclick="openPopup()">
+          <div class="loginbotao">Login</div>
+        </a>
+      <% } %>
+    <!-- Pop-up de Login -->
+    <div id="popup" class="popup">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="login">Login Kitty Club</h2>
+      <p class="login">Se você não possui uma conta <a href="#" onclick="openRegistro()" class="linkar"> registrar</a></p>
+      <!-- Adicione aqui o seu formulário de login -->
+      <form method="post" action="/login">
+        <label>Email</label>
+        <input name="email" type="email" placeholder="Seu email">
+        <label>Senha</label>
+        <input name="senha" type="password" placeholder="Sua senha">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      
+      
+    </div>
+    
+    <!-- Pop-up de Registro -->
+      <div id="popupRegistro" class="popup">
+        <span class="close" onclick="closeRegistro()">&times;</span>
+        <h2 id="login">Registro Kitty Club</h2>
+        <p class="login">Se você possui uma conta <a href="#" onclick="voltarLogin()" class="linkar">entrar</a></p>
+
+        <!-- Adicione aqui o seu formulário de registro -->
+        <form method="post" action="/register">
+          <label>Nome de usuário</label>
+          <input name="username" type="text" placeholder="Seu nome de usuário">
+          <label>Email</label>
+          <input name="email" type="email" placeholder="Seu email">
+          <label>Senha</label>
+          <input name="password" type="password" placeholder="Sua senha">
+          <br>
+          <br>
+          <br>
+          <input type="submit" value="Registrar">
+        </form>
+      </div>
+  </div>
+</div>
+    <div class="graybar"></div>
+    
+    <script>
+      
+    function pesquisar() {
+      // Obtém o valor inserido na barra de pesquisa
+      var termo = document.getElementById("barra-pesquisa").value.toLowerCase();
+
+      // Obtém todos os itens que serão filtrados
+      var itens = document.getElementsByClassName("item");
+
+      // Percorre todos os itens e exibe ou oculta com base no termo de pesquisa
+      for (var i = 0; i < itens.length; i++) {
+        var item = itens[i];
+        var nome = item.textContent.toLowerCase();
+
+        if (nome.includes(termo)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      }
+    }
+      function openPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+      }
+    
+      function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+      }
+    
+      function openRegistro() {
+        var popupRegistro = document.getElementById("popupRegistro");
+        popupRegistro.style.display = "block";
+      }
+    
+      function closeRegistro() {
+        var popupRegistro = document.getElementById("popupRegistro");
+        popupRegistro.style.display = "none";
+        popup.style.display = "none";
+      }
+    
+      function voltarLogin() {
+        var popupRegistro = document.getElementById("popupRegistro");
+        popupRegistro.style.display = "none";
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+
+
+      }
+    </script>
+    

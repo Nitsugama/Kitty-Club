@@ -1,0 +1,578 @@
+.segredo {
+  font-size: large;
+}
+.username{
+  color:white;
+  font-size: 140%;
+  font-weight: 700;
+  margin: 20%;
+}
+.usernamediv{
+  display: flex;
+  align-items: center;
+}
+.username:hover{
+  color: #EB8B1B;
+}
+.logout{
+  font-size: 120%;
+}
+#channel{
+ font-size: 15px;
+  color: gray;
+}
+.logout:hover{
+  text-decoration: underline ;
+}
+
+.loginbotao{
+  color: black;
+  background-color: #EB8B1B;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  padding-right: 25px;
+  border-radius: 5px;
+  font-size: 140%;
+  font-weight: 700;
+}
+.bloco {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  gap: 10px;
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+}
+#pesquisa{
+  border: none;
+  width: 90%;
+}
+.linha {
+  display: flex;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 5px;
+  border-radius: 7px;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+
+.infonutricional {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(43, 43, 43);
+  padding: 10px;
+  border-radius: 7px;
+}
+
+/* site start*/
+
+body {
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #EB8B1B;
+  text-decoration: none;
+}
+
+
+/*navbar part*/
+
+.home {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input {
+  /* width: 500px; */
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background-color: #333333;
+  border-style: hidden;
+}
+
+input:active {
+  border-style: hidden;
+}
+
+.navbar {
+  border-radius: 20px;
+  margin-right: 10%;
+  display: flex;
+  background-color: #333333;
+}
+.search-form{
+height: 0vw;
+}
+input#input.search-input {
+  border-radius: 20px;
+  color: white;
+  border: none;
+  margin-bottom: 1px;
+  margin-top: 5px;
+}
+
+input#input.search-input:focus {
+  border-radius: 20px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.search-button {
+  border-radius: 20px;
+  background-color: #333333;
+  border: none;
+  height: 42px;
+}
+
+#lupa {
+  padding-bottom: 3px;
+}
+
+#lupa:hover {
+  cursor: pointer;
+}
+
+#profilepic {
+  border-radius: 100px;
+  width: 65px;
+}
+
+.graybar {
+  background-color: #333333;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+
+}
+
+h4 {
+  font-size: 2em;
+}
+
+/*videos part*/
+
+p {
+  color: white;
+}
+
+.v1 {
+  display: grid;
+  justify-content: space-around;
+}
+
+#row {
+  display: flex;
+  justify-content: space-around;
+}
+
+p.row2 {
+  height: 1vw;
+  width: 16vw;
+  font-size: 1vw;
+  justify-content: flex-start;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+}
+
+div.bottext {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*bottom part*/
+
+#end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ss {
+  color: #B27023;
+}
+
+.s1 {
+  color: #ED9E42;
+  background-color: #4B4B4B;
+  width: 30px;
+  height: 23px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.s2 {
+  color: #ED9E42;
+  background-color: #4B4B4B;
+  width: 30px;
+  height: 23px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-right: 3px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.s3 {
+  color: #ED9E42;
+  background-color: #4B4B4B;
+  width: 30px;
+  height: 23px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-right: 3px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.s {
+  color: white;
+  margin-right: 5px;
+}
+
+.feedback {
+  color: #EB8B1B;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/*hover par*/
+
+a.links:hover {
+  color: #EB8B1B;
+}
+
+p.s1:hover {
+  color: #bd690a;
+  background-color: #303030;
+}
+
+p.s2:hover {
+  color: #bd690a;
+  background-color: #303030;
+}
+
+p.s3:hover {
+  color: #bd690a;
+  background-color: #303030;
+}
+
+h2.ss:hover {
+  color: #a35c0b;
+  cursor: pointer;
+}
+
+h3.s:hover {
+  color: #867f7f;
+  cursor: pointer;
+}
+
+a.feedback:hover {
+  color: #b66100
+}
+
+/*---------------------------------------pop up login----------------------------------*/
+
+.box {
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 52px 0px 0px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: #403e3d;
+  border-radius: 50px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.wrapper {
+  margin: 109px auto;
+  padding: 20px;
+  background: #222222;
+  border-radius: 20px;
+  width: 25%;
+  position: relative;
+
+}
+
+.wrapper h2 {
+  margin-top: 0;
+  color: #fff;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.wrapper .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+#cat-vid {
+  width: 29vw;
+}
+
+#heart-but,
+#view-but {
+  border: black;
+  background: black;
+}
+
+#heart-but:hover,
+#view-but:hover {
+  opacity: 0.5;
+}
+
+/*form design*/
+
+.container {
+  border-radius: 5px;
+  background-color: #222222;
+  padding: 20px 0;
+}
+
+form label {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: white;
+  outline: none;
+}
+
+input[type="submit"] {
+  position: absolute;
+  width: 17vw;
+  height: 3vw;
+  background-color: #413b3b;
+  color: #fff;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  left: 10%;
+  top: 75%;
+}
+
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  resize: vertical;
+  color: white;
+}
+
+.register p {
+  display: flex;
+}
+
+#likes {
+  font-size: 1vw;
+  color: white;
+}
+
+#views {
+  color: white;
+}
+
+#heart {
+  width: 2vw;
+}
+
+#visu {
+  width: 2vw;
+}
+
+/* Estilos para o pop-up */
+.popup{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  background-color: #333333;
+  border: none;
+  padding: 20px;
+  z-index: 9999;
+  animation: fade-in 0.5s ease ;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.popup h2#login {
+  text-align: center;
+}
+
+.popup p.login {
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+#login {
+  color: white;
+}
+#email{
+  width: 95%;
+}
+.popup form {
+  margin-top: 20px;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popup input[type="text"],
+.popup input[type="password"],.popup input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.popup a {
+  margin-left: 1%;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popup input[type="submit"] {
+  width: 80%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 3vw;
+  background-color: #EB8B1B;
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .popup {
+    width: 90%;
+  }
+
+  .popup input[type="submit"] {
+    width: 80%;
+    height: 10%;
+  }
+
+  @media (max-width: 400px) {
+    .popup {
+      width: 95%;
+    }
+
+    .popup input[type="submit"] {
+      width: 35%;
+    }
+  }
+
+}

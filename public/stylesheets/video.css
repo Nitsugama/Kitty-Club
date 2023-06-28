@@ -1,0 +1,330 @@
+* {
+    font-family: sans-serif;
+    
+}
+
+body {
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+span {
+    color: gray;
+}
+
+
+h4 {
+    font-size: 2em;
+}
+
+.view,
+.likes span {
+    color: #686868;
+    font-size: 300%;
+
+}
+
+.view {
+    padding-bottom: 5px;
+}
+
+.vid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+}
+
+.home {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-button {
+    background-color: #333333;
+    border: none;
+    height: 42px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.canal {
+    display: flex;
+}
+
+.perfil {
+    margin-left: 100px;
+}
+
+.perfil h3,
+p {
+    color: #5F5F5F;
+}
+
+.graybar {
+    background-color: #333333;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#lupa {
+    padding-top: 2px;
+}
+
+#lupa:hover {
+    cursor: pointer;
+}
+
+/*video css */
+#pagina_video {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+}
+
+.video {
+    margin-top: 15%;
+}
+
+.video img {
+    width: 28vw;
+    height: 28vh;
+}
+
+.video_principal {
+    width: 60vw;
+    height: 60vh;
+    margin: 6% 0% 0% 5%;
+}
+
+#tittle{
+    color: white;
+    text-align: center;
+}
+
+#video_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+#video_list p {
+  margin-top: 10px;
+    font-size: 1.5vw;
+    font-weight: 700;
+   
+}
+
+#primeiro_vid {
+    margin-top: 15%;
+}
+
+.next_video {
+    background-color: gray;
+    width: 28vw;
+    height: 28vh;
+    margin: 0% 0% 0% 0%
+}
+
+
+video {
+    width: 60vw;
+    height: 60vh;
+
+}
+
+#title {
+    color: white;
+    margin: 0px 0px 0px 13%;
+    width: 100%;
+}
+
+.tit,
+.hud2 {
+    width: 63vw;
+
+}
+
+.hud {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+}
+
+.perfil_vid {
+    margin: 0px 0px 0px 6%;
+    color: #5F5F5F;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+
+
+}
+
+.info {
+    width: 100%;
+
+}
+
+.perfil_vid .info {
+    color: white;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin: 0px 0px 0% 2%;
+}
+
+#canal {
+    font-weight: 800;
+    font-size: 150%;
+    margin-bottom: 1%;
+}
+
+#like {
+    margin-left: 2%;
+}
+
+#bts-inscrição {
+    background-color: #EB8B1B;
+    width: 25%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.descricao {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #4B4B4B;
+    width: 73%;
+    height: 150px;
+    margin: 0px 0px 0px 5%;
+}
+
+
+.descricao_text {
+    height: 137%;
+    width: 46%;
+    text-align: center;
+    margin-top: 3%;
+    padding: 0px 0px 0px 5%
+}
+
+.descricao_text p {
+    color: white;
+    width: 29vw;
+}
+
+.search-box1 {
+    display: inline-block;
+    width: px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    padding: 0%;
+}
+
+
+.search-box1 input:active {
+    border: none;
+
+
+}
+
+input:focus {
+    outline: none;
+}
+
+.search-box1 input[type="text"] {
+    background-color: #000;
+    width: 60vw;
+    height: 100%;
+    border: none;
+    padding: 0%;
+}
+
+.search-box1 input[type="get"] {
+    display: none;
+}
+
+#comentarios {
+    color: white;
+    margin: 3% 0px 0px 5%;
+}
+
+.campo {
+
+    margin: 5% 0px 0px 0px;
+}
+
+.comentarios {
+    width: 68%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.comentarios p {
+    color: white;
+}
+
+.coment {
+    width: 68%;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.display-comen {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info_vid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info_vid h3 {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.info_vid img{
+    width: 60px;
+    height: 50px;
+}
+#inscritos{
+    margin-top: 0;
+}

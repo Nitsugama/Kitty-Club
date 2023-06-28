@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kittyclub</title>
+
+    <link rel="stylesheet" href="../stylesheets/video.css ">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+
+</head>
+
+<body>
+    <%- include('header'); %>
+
+        <main>
+            <section id="pagina_video">
+                <div class="video_principal">
+                    <video controls autoplay muted>
+                        <source id="video" src="<%=caminhoVideo  %>">
+                    </video>
+                </div>
+                <div class="tit">
+                    <div class="hud">
+                        <h2 id="title">Lorem ipsum dolor sit amet consectet</h2>
+                        <img id="view" src="../images/eyes.png">
+                        <h3>20K</h3>
+                        <img id="like" src="../images/heart.png">
+                        <h3>20K</h3>
+                    </div>
+                </div>
+                <div class="hud2">
+                    <div class="perfil_vid">
+                        <img src="../images/perfil_logado.png">
+                        <div class="info">
+                            <h3 id="canal">cast</h3>
+                            <h6 id="inscritos">inscritos:500</h6>
+                        </div>
+                        <button id="bts-inscrição">increver-se</button>
+                    </div>
+                </div>
+                <div class="descricao">
+                    <div class="descricao_text">
+                        <p id="descricao-video">
+                            catos Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem tempora quaerat ea
+                            aliquid, dolor totam esse, non facilis soluta ab minima magni libero illo fuga sint minus
+                            dignissimos, laborum voluptatibus.
+                        </p>
+                    </div>
+                </div>
+                <section id="comentarios">
+                    <h2>2 comentarios</h2>
+                    <div class="campo">
+                        <img src="../images/perfil_logado.png" alt="">
+                        <form class="search-box1">
+                            <input type="text" name="search" placeholder="comente">
+                            <hr id="coment">
+                            <input type="get" value="add_comment">
+                        </form>
+                    </div>
+                    <div class="display-comen">
+                        <div class="coment">
+                            <img id="perfil1" src="../images/perfil_logado.png" alt="">
+                            <p id="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint recusandae
+                                quis mollitia, quod corporis quaerat ipsam deserunt minus atque rem earum aut sapiente
+                                iusto quosunt? Deleniti?</p>
+                        </div>
+                        <div class="coment">
+                            <img id="perfil2" src="../images/perfil_logado.png" alt="">
+                            <p id="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint recusandae
+                                quis mollitia, quod corporis quaerat ipsam deserunt minus atque rem earum aut sapiente
+                                iusto quo cupiditate tempore est sunt? Deleniti?</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="video_list">
+                <div class="video">
+                    <h1 id="tittle">videos mais populares</h1>
+                    <div id="primeiro_vid" class="next_video"> <a href="/video/home.cato1?id=1&title=video%20de%20gatos%20fofos&desc=Você%20testemunhará%20gatinhos%20fofos%20explorando%20o%20mundo%20ao%20seu%20redor,%20brincando%20com%20bolinhas%20de%20lã,%20perseguindo%20feixes%20de%20luz%20e%20descobrindo%20caixas%20vazias%20como%20se%20fossem%20o%20paraíso%20dos%20gatos.%20A%20suavidade%20de%20suas%20patinhas,%20o%20ronronar%20suave%20e%20os%20olhares%20inocentes%20irão%20cativar%20você%20instantaneamente.&channel=PurrfectFeline
+                        "><img
+                                src="/images/home.vid2.jpg" id="cat-vid" alt="gato"> </a>
+                    </div>
+
+                    <div class="info_vid">
+                        <p class="row2">videos de gatos fofos </p>
+                        <div class="div">
+                            <p id="channel">PurrfectFeline</p>
+
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="next_video">
+                            <a href="/video/home.cato4?id=1&title=video%20extremamente%20engra%C3%A7ado&desc=Prepare-se%20para%20se%20surpreender%20com%20uma%20s%C3%A9rie%20de%20cenas%20c%C3%B4micas,%20protagonizadas%20por%20pessoas,%20animais%20e%20at%C3%A9%20mesmo%20eventos%20inusitados.%20Desde%20quedas%20engra%C3%A7adas%20e%20trope%C3%A7os%20desastrados%20at%C3%A9%20pegadinhas%20divertidas%20e%20rea%C3%A7%C3%B5es%20surpreendentes,%20cada%20momento%20capturado%20neste%20v%C3%ADdeo%20%C3%A9%20garantia%20de%20risadas%20incontrol%C3%A1veis.&channel=KittyLove">
+                            <img src="/images/home.vid4.jpg" id="cat-vid" alt="gato"> </a>
+
+                            <div class="info_vid">
+                                <p class="row2">video extremamente engraçado</p>
+                                <div class="div">
+                                    <p id="channel">KittyLove</p>
+
+                                </div>
+
+                            </div>
+                            <div class="video">
+
+                                <div class="next_video">
+                                    <a href="/video/home.cato5?id=1&title=Gatos%20hil%C3%A1rios:%20uma%20compila%C3%A7%C3%A3o%20de%20trapalhadas%20felinas&desc=Voc%C3%AA%20testemunhar%C3%A1%20gatos%20desajeitados%20pulando%20e%20escorregando,%20tentando%20dominar%20brinquedos%20ou%20at%C3%A9%20mesmo%20se%20enroscando%20em%20situa%C3%A7%C3%B5es%20inusitadas.%20Cada%20momento%20capturado%20neste%20v%C3%ADdeo%20%C3%A9%20uma%20demonstra%C3%A7%C3%A3o%20de%20como%20os%20gatos%20podem%20ser%20adoravelmente%20atrapalhados%20e%20divertidos.&channel=PawsomeAdventures"><img src="/images/home.vid10.jpg" id="cat-vid"
+                                            alt="g]ato"></a>
+                                    <div class="info_vid">
+                                        <p class="row2">Gatos hilários: uma compilação de trapalhadas felinas</p>
+                                        <div class="div">
+                                            <p id="channel">PawsomeAdventures</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="video">
+                                        <div class="next_video"> <a href="/video/home.cato8?id=1&title=gatos%20medrosos:%20o%20que%20fazer%20?&desc=Descubra%20como%20criar%20um%20espa%C3%A7o%20seguro%20e%20tranquilo%20para%20o%20seu%20gato,%20fornecendo%20esconderijos%20e%20%C3%A1reas%20de%20conforto%20onde%20ele%20possa%20se%20refugiar%20quando%20se%20sentir%20amea%C3%A7ado.%20Aprenda%20a%20identificar%20os%20gatilhos%20que%20desencadeiam%20o%20medo%20do%20seu%20gato%20e%20encontre%20maneiras%20de%20minimiz%C3%A1-los,%20seja%20por%20meio%20de%20t%C3%A9cnicas%20de%20dessensibiliza%C3%A7%C3%A3o%20gradual%20ou%20de%20modifica%C3%A7%C3%A3o%20do%20ambiente.&channel=FelineFrenzy"><img src="/images/home.video8.jpg"" id="cat-vid" alt="gato"> </a>
+                                            <div class="info_vid">
+                                                <p class="row2">gatos medrosos: o que fazer ? </p>
+                                                <div class="div">
+                                                    <p id="channel">FelineFrenzy</p>
+                                                </div>
+
+        </main>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const videoId = params.get('id');
+            const videoTitle = params.get('title');
+            const videoDescription = params.get('desc');
+            const videochannel = params.get('channel');
+
+            // Atualize os elementos com os valores dos parâmetros
+            const videoTitleElement = document.getElementById('title');
+            const videoDescriptionElement = document.getElementById('descricao-video');
+            const videochannelElement = document.getElementById('canal');
+            videoTitleElement.textContent = videoTitle;
+            videoDescriptionElement.textContent = videoDescription;
+            videochannelElement.textContent = videochannel;
+        </script>
+</body>
+
+</html>

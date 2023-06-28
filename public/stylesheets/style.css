@@ -1,0 +1,52 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+button{
+  background-color: white;
+}
+
+.segredo{
+  font-size: large;
+}
+
+.bloco{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  gap: 10px;
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+}
+.linha{
+  display: flex;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 5px;
+  border-radius: 7px;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+.infonutricional{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(43, 43, 43);
+  padding: 10px;
+  border-radius: 7px;
+}

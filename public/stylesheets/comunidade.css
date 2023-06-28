@@ -1,0 +1,55 @@
+.topicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+    color: white;
+    margin-top: 2%;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 83vw;
+    height: 94vh;
+}
+.conteudo img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: 75vh;
+}
+
+.post{
+    margin-right: 431px;
+    width: 54vw;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.post_conteudo{
+   
+}
+
+.info_commu{
+    margin: 0% 0% 0% 80%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.info_commu img{
+    width: 4vw;
+    height: 6vh; ;
+}
+#perf{
+    width: 4vw;
+    height: 8vh;
+}
+#heart{
+    width: 3vw;
+    height: 5vh;
+}
