@@ -25,10 +25,11 @@
                 <div class="tit">
                     <div class="hud">
                         <h2 id="title">Lorem ipsum dolor sit amet consectet</h2>
-                        <img id="view" src="../images/eyes.png">
-                        <h3>20K</h3>
-                        <img id="like" src="../images/heart.png">
-                        <h3>20K</h3>
+                       <button id="likeButton" onclick="toggleLike()">
+                        <img id="like" src="../images/heart.png"></button>
+                        <p id="likeCount">0</p>
+                      
+            
                     </div>
                 </div>
                 <div class="hud2">
@@ -127,6 +128,23 @@
         </main>
 
         <script>
+            var likes = 0;
+    var hasLiked = false;
+    function toggleLike() {
+  const likeCountElement = document.getElementById("likeButton");
+  const likeCountText = document.getElementById("likeCount");
+  
+  if (hasLiked) {
+    likes--;
+    likeCount.style.color = "white";
+  } else {
+    likes++;
+    likeCount.style.color = "#EB8B1B";
+  }
+  
+  hasLiked = !hasLiked;
+  likeCount.innerHTML = likes.toString();
+}
             const params = new URLSearchParams(window.location.search);
             const videoId = params.get('id');
             const videoTitle = params.get('title');
